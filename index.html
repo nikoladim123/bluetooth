@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <form class="" action="https://putsreq.com/VZwAKQYugupEtiqR1VNx" method="post">
+    <button type="submit" name="button"></button>
+  </form>
+
+  <body>
+
+    <div class="garden">
+      <div class="ball" style="top: 80px; left: 80px;font-size:5vw;"></div>
+    </div>
+    <pre class="output">beta : null
+      gamma: null
+    </pre>
+
+    <div class="proxy">
+
+    </div>
+
+
+
+    <script>
+      let options = {
+        filters: [{
+            services: ['heart_rate']
+          },
+          {
+            services: [0x1802, 0x1803]
+          },
+          {
+            services: ['c48e6067-5295-48d3-8d5c-0395f61792b1']
+          },
+          {
+            name: 'HUAWEI P20 lite'
+          },
+          {
+            namePrefix: 'Prefix'
+          }
+        ],
+        optionalServices: ['battery_service']
+      }
+
+      navigator.bluetooth.requestDevice(options).then(function(device) {
+          console.log('Name: ' + device.name);
+          // Do something with the device.
+        })
+        .catch(function(error) {
+          console.log("Something went wrong. " + error);
+        });
+    </script>
+
+
+  </body>
+</body>
+
+</html>
