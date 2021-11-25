@@ -8,12 +8,6 @@
 
 <body>
 
-  <form class="" action="https://putsreq.com/VZwAKQYugupEtiqR1VNx" method="post">
-    <button type="submit" name="button"></button>
-  </form>
-
-  <body>
-
 <button class='myBut' type="button" name="button">AAAAAAAAA</button>
 
 
@@ -37,6 +31,7 @@
         ],
         optionalServices: ['battery_service']
       }
+
       var myBut = document.getElementsByClassName('myBut');
       myBut[0].addEventListener('click',function(){
         navigator.bluetooth.requestDevice(options).then(function(device) {
