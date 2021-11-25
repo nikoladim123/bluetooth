@@ -14,17 +14,7 @@
 
   <body>
 
-    <div class="garden">
-      <div class="ball" style="top: 80px; left: 80px;font-size:5vw;"></div>
-    </div>
-    <pre class="output">beta : null
-      gamma: null
-    </pre>
-
-    <div class="proxy">
-
-    </div>
-
+<button class='myBut' type="button" name="button">AAAAAAAAA</button>
 
 
     <script>
@@ -47,14 +37,17 @@
         ],
         optionalServices: ['battery_service']
       }
+      var myBut = document.getElementsByClassName('myBut');
+      myBut[0].addEventListener('click',function(){
+        navigator.bluetooth.requestDevice(options).then(function(device) {
+            console.log('Name: ' + device.name);
+            // Do something with the device.
+          })
+          .catch(function(error) {
+            console.log("Something went wrong. " + error);
+          });
+      });
 
-      navigator.bluetooth.requestDevice(options).then(function(device) {
-          console.log('Name: ' + device.name);
-          // Do something with the device.
-        })
-        .catch(function(error) {
-          console.log("Something went wrong. " + error);
-        });
     </script>
 
 
